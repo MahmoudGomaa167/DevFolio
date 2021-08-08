@@ -58,7 +58,7 @@ a{
     top: 0;
 }
 
-.icon-arrow-thin-up{
+#goTop{
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -69,6 +69,7 @@ a{
     z-index: 9999;
     cursor: pointer;
     opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 
 
@@ -84,23 +85,15 @@ header{
 
 
 /* Navbar */
-.custom-navbar{
-    position: fixed;
-    z-index: 999999;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-}
-
 .custom-navbar nav{
-    display: flex;
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    align-items: center;
-    justify-content: space-between;
+    z-index: 999999999;
     padding: 30px 0;
+    transition: all 0.25s ease-in-out;
 }
 
 .custom-navbar nav .logo a{
@@ -139,7 +132,8 @@ header{
 }
 
 
-.custom-navbar nav .links-list .list-item .list-link:after{
+.custom-navbar nav .links-list .list-item .list-link:after,
+#dropdown a::after{
     content: "";
     position: absolute;
     left: 0;
@@ -151,12 +145,25 @@ header{
 }
 
 .custom-navbar nav .links-list .list-item .list-link.active:after,
-.custom-navbar nav .links-list .list-item:hover .list-link:after{
+.custom-navbar nav .links-list .list-item:hover .list-link:after,
+#dropdown:hover a:after{
     width: 80%;
 }
 
 #dropdown{
     position: relative;
+    
+}
+
+#dropdown a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 8px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 #dropdown a .icon-keyboard_arrow_down{
@@ -392,47 +399,21 @@ header{
     font-weight: normal;
 }
 
-.about-section .container .main-skills .skills .html,
-.about-section .container .main-skills .skills .css,
-.about-section .container .main-skills .skills .php,
-.about-section .container .main-skills .skills .js{
+.about-section .container .main-skills .skills div{
     background-color: #cde1f8;
     height: 10px;
     margin-bottom: 20px;
     position: relative;
 }
 
-.about-section .container .main-skills .skills .html span{
+.about-section .container .main-skills .skills div span{
     background-color: #0078ff;
-    width: 85%;
     position: absolute;
     left: 0;
     height: 10px;
+    transition: all 0.25s ease-in-out;
 }
 
-.about-section .container .main-skills .skills .css span{
-    background-color: #0078ff;
-    width: 75%;
-    position: absolute;
-    left: 0;
-    height: 10px;
-}
-
-.about-section .container .main-skills .skills .php span{
-    background-color: #0078ff;
-    width: 50%;
-    position: absolute;
-    left: 0;
-    height: 10px;
-}
-
-.about-section .container .main-skills .skills .js span{
-    background-color: #0078ff;
-    width: 90%;
-    position: absolute;
-    left: 0;
-    height: 10px;
-}
 
 .about-section .container .about-me h2{
     font-size: 32px;

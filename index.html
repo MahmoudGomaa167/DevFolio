@@ -13,13 +13,13 @@
 
 <body>
   <div class="home-page">
-    <span class="icon-arrow-thin-up"></span>
+    <span class="icon-arrow-thin-up" id="goTop"></span>
     <!--============================Header Section======================================-->
-    <header>
+    <header id="home" class="home-section current">
       <!--============================Navbar Section======================================-->
       <div class="custom-navbar">
-        <div class="container">
-          <nav>
+          <nav id="navbar">
+            <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
               <a href="#">DevFolio</a>
             </div>
@@ -27,23 +27,23 @@
             <div class="links-list">
               <ul class="list-unstyled">
                 <li class="list-item">
-                  <a href="#" class="list-link text-uppercase active">home</a>
+                  <a href="#home" class="list-link text-uppercase active">home</a>
                 </li>
                 <li class="list-item">
-                  <a href="#" class="list-link text-uppercase">about</a>
+                  <a href="#about" class="list-link text-uppercase">about</a>
                 </li>
                 <li class="list-item">
-                  <a href="#" class="list-link text-uppercase">services</a>
+                  <a href="#services" class="list-link text-uppercase">services</a>
                 </li>
                 <li class="list-item">
-                  <a href="#" class="list-link text-uppercase">work</a>
+                  <a href="#portfolio" class="list-link text-uppercase">work</a>
                 </li>
                 <li class="list-item">
-                  <a href="#" class="list-link text-uppercase">blog</a>
+                  <a href="#blog" class="list-link text-uppercase">blog</a>
                 </li>
                 <li class="list-item" id="dropdown">
 
-                  <a href="#" class="list-link text-uppercase">drop down <span class="icon-keyboard_arrow_down"></span></a>
+                  <a class="text-uppercase">drop down <span class="icon-keyboard_arrow_down"></span></a>
 
                   <ul class="dropdown-list list-unstyled">
                     <li><a href="#" class="text-uppercase">drop down 1</a></li>
@@ -56,13 +56,14 @@
                 </li>
 
                 <li class="list-item">
-                  <a href="#" class="list-link text-uppercase">contact</a>
+                  <a href="#contact" class="list-link text-uppercase">contact</a>
                 </li>
               </ul>
 
             </div>
+          </div>
           </nav>
-        </div>
+        
       </div>
       <!--============================Navbar Section======================================-->
 
@@ -78,7 +79,7 @@
     <!--============================Header Section======================================-->
 
     <!--============================About Me Section======================================-->
-    <section class="about-section">
+    <section class="about-section current" id="about">
       <div class="container p-5 bg-white">
         <div class="row">
           <div class="col-md-6">
@@ -97,13 +98,13 @@
               <div class="skills">
                 <h5>Skill</h5>
                 <h6>HTML 85%</h6>
-                <div class="html"><span></span></div>
+                <div class="html"><span class="custom-progress" data-width= "85"></span></div>
                 <h6>CSS3 75%</h6>
-                <div class="css"><span></span></div>
+                <div class="css"><span class="custom-progress" data-width="75"></span></div>
                 <h6>PHP 50%</h6>
-                <div class="php"><span></span></div>
+                <div class="php"><span class="custom-progress" data-width="50"></span></div>
                 <h6>JAVASCRIPT 90%</h6>
-                <div class="js"><span></span></div>
+                <div class="js"><span class="custom-progress" data-width="90"></span></div>
               </div>
             </div>
           </div>
@@ -122,7 +123,7 @@
     <!--============================About Me Section======================================-->
 
     <!--============================Services Section======================================-->
-    <section class="services">
+    <section class="services current" id="services">
       <div class="container">
         <div class="section-title text-center">
           <h2 class="text-uppercase">services</h2>
@@ -196,7 +197,7 @@
     <!--============================Services Section======================================-->
 
     <!--============================Counter Section======================================-->
-    <section class="counter">
+    <section class="counter current">
       <div class="blue-overlay"></div>
       <div class="container">
         <div class="row">
@@ -245,7 +246,7 @@
     <!--============================Counter Section======================================-->
 
     <!--============================Portfolio Section======================================-->
-    <section class="portfolio">
+    <section class="portfolio current" id="portfolio">
       <div class="container">
         <div class="section-title text-center">
           <h2 class="text-uppercase">portfolio</h2>
@@ -373,7 +374,7 @@
     <!--============================Portfolio Section======================================-->
 
     <!--============================Testimonials Section======================================-->
-    <section class="testimonial">
+    <section class="testimonial current">
       <div class="blue-overlay"></div>
       <div class="container">
         <div class="owl-carousel owl-theme testimonial-item">
@@ -404,7 +405,7 @@
     <!--============================Testimonials Section======================================-->
 
     <!--============================Blog Section======================================-->
-    <section class="blog">
+    <section class="blog current" id="blog">
       <div class="container">
         <div class="section-title text-center">
           <h2 class="text-uppercase">blog</h2>
@@ -492,7 +493,7 @@
     <!--============================Blog Section======================================-->
 
     <!--============================Contact Section======================================-->
-    <section class="contact">
+    <section class="contact current" id="contact">
       <div class="blue-overlay"></div>
       <div class="container p-5">
         <div class="row">
@@ -564,7 +565,7 @@
     <!--============================Footer Section======================================-->
 
   </div>
-  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
