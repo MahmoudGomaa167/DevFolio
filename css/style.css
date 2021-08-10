@@ -72,6 +72,63 @@ a{
     transition: all 0.4s ease-in-out;
 }
 
+.portfolio-modal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999999999999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+    display: none;
+    opacity: 1;
+}
+
+.portfolio-modal .icon-chevron-thin-left{
+    position: absolute;
+    left: 15px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #0078ff;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.portfolio-modal .icon-chevron-thin-right{
+    position: absolute;
+    right: 15px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #0078ff;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.portfolio-modal .icon-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #0078ff;
+    font-size: 30px;
+    border-radius: 6px;
+}
+
+.portfolio-modal .modal-img{
+    margin: auto;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
 
 /* Header Section */
 header{
@@ -411,7 +468,7 @@ header{
     position: absolute;
     left: 0;
     height: 10px;
-    transition: all 0.25s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 
@@ -929,3 +986,11 @@ footer .copyright p:last-of-type a{
     color: #fff;
 }
 /* Footer Section */
+
+
+/* Media Screen at 1024 px */
+@media (max-width: 1024px){
+    .container {
+        max-width: 95%;
+    }
+}

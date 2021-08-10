@@ -90,6 +90,110 @@ $(document).ready(function(){
             }
         });
 
+        //counter
+        let counters = document.querySelectorAll('.counter-number');
+
+        let countUp = function(){
+            counters.forEach((counter) => {
+                $(window).scroll(function(){
+                    let windowScroll = Math.ceil($(window).scrollTop()),
+                        counterOffset = Math.ceil($('.counter').offset().top);
+                        workOffset = Math.ceil($('#portfolio').offset().top);
+
+
+                    
+                    if(windowScroll >= counterOffset - 300 && windowScroll <= workOffset - 100){
+                        function updateCounter (){
+                            let target = Number(counter.getAttribute('data-target'));
+                            let c = Number(counter.innerText);
+                            let increment = target / 200;
+                            if (c < target){
+                                counter.innerText = `${Math.ceil(c + increment)}`;
+                                setInterval(updateCounter, 1)
+                            }else{
+                                counter.innerText = target;
+                                
+                            }
+                        }
+                        updateCounter();
+                    }
+        
+                })
+                
+            }); 
+        }
+        countUp();
+
+        // Modal
+        let images = document.querySelectorAll('.port-img');
+        let modalImage = document.querySelector('.modal-img');
+        let nextBtn = document.getElementById('next');
+        let prevBtn = document.getElementById('prev');
+        let closeBtn = document.getElementById('close');
+        let imagesArr = Array.from(images);
+        let index;
+
+
+        for(let image of images){
+            $(image).click(function (){
+                let imageSrc = $(this).attr('src');
+                index = imagesArr.indexOf(image);
+
+                $('.portfolio-modal').css({
+                    display: 'flex',
+                });
+                $(modalImage).attr('src', imageSrc);
+                $('body').css('overflow', 'hidden');
+            })
+        }
+
+        function next(){
+            index++;
+            if(index > imagesArr.length - 1){
+                index = 0;
+                $(modalImage).attr('src', imagesArr[0].getAttribute('src'));
+            }else{
+                $(modalImage).attr('src', imagesArr[index].getAttribute('src'));
+            }
+        }
+
+        function prev(){
+            index--;
+            if(index < 0){
+                index = imagesArr.length - 1;
+                $(modalImage).attr('src', imagesArr[index].getAttribute('src'));
+            }else{
+                $(modalImage).attr('src', imagesArr[index].getAttribute('src'));
+            }
+        }
+
+        function close(){
+            $('.portfolio-modal').css('display', 'none');
+            $('body').css('overflow', 'auto');
+        }
+
+        $(nextBtn).click(next);
+
+        $(prevBtn).click(prev);
+
+        $(closeBtn).click(close);
+
+       $(document).keyup(function (event){
+           let key = event.code;
+           if($('.portfolio-modal').css('display') !== 'none'){
+               if(key === 'ArrowRight'){
+                   next();
+               }
+               if(key === 'ArrowLeft'){
+                   prev();
+               }
+               if(key === 'Escape'){
+                   close();
+               }
+           }
+       });
+        
+
         $('.testimonial-item').owlCarousel({
             loop:true,
             margin:0,
