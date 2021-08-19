@@ -1311,7 +1311,7 @@ footer .copyright p:last-of-type a{
     }
 
     .portfolio-modal .modal-img{
-        width: 80%;
+        width: 70%;
     }
 
     .portfolio-modal .icon-chevron-thin-right{
@@ -1379,6 +1379,8 @@ footer .copyright p:last-of-type a{
     .portfolio .portfolio-card .card-desc .icon .custom-icon::before{
         font-size: 30px;
     }
+
+    
 
     .testimonial .testimonial-item .item-info h4{
         font-size: 20px;
