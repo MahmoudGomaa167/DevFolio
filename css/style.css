@@ -4,7 +4,7 @@ body{
 }
 .container{
     padding: 0;
-    max-width: 85%;
+    max-width: 90%;
     position: relative;
 }
 
@@ -70,6 +70,7 @@ a{
     cursor: pointer;
     opacity: 0;
     transition: all 0.4s ease-in-out;
+    z-index: 999999999999999999999999;
 }
 
 .portfolio-modal{
@@ -130,6 +131,46 @@ a{
     transition: opacity 0.5s ease-in-out;
 }
 
+.icon-bars{
+    display: none;
+}
+
+.menu-background {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    display: none;
+}
+
+.icon-bars{
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.icon-close{
+    display: none;
+    color: #1e1e1e;
+    font-size: 24px;
+    cursor: pointer;
+   
+}
+
+.menu-background .container{
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999999999;
+}
 /* Header Section */
 header{
     background-image: url(../images/hero-bg.jpg);
@@ -142,7 +183,7 @@ header{
 
 
 /* Navbar */
-.custom-navbar nav{
+nav{
     width: 100%;
     position: fixed;
     left: 0;
@@ -153,7 +194,7 @@ header{
     transition: all 0.25s ease-in-out;
 }
 
-.custom-navbar nav .logo a{
+ nav .logo a{
     text-decoration: none;
     font-size: 28px;
     color: #fff;
@@ -163,21 +204,26 @@ header{
     justify-content: space-between;
 }
 
-.custom-navbar nav .links-list ul{
+nav .custom-navbar .links-list{
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999999999;
 }
 
-.custom-navbar nav .links-list ul li{
+nav .links-list .list-item{
    margin-right: 30px;
 }
 
-.custom-navbar nav .links-list ul li:last-child{
+nav .links-list li:last-child{
     margin-right: 0;
 }
 
-.custom-navbar nav .links-list .list-item .list-link{
+nav .links-list .list-item .list-link{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -189,7 +235,7 @@ header{
 }
 
 
-.custom-navbar nav .links-list .list-item .list-link:after,
+nav .links-list .list-item .list-link:after,
 #dropdown a::after{
     content: "";
     position: absolute;
@@ -201,15 +247,14 @@ header{
     transition: all 0.3s ease-in-out;
 }
 
-.custom-navbar nav .links-list .list-item .list-link.active:after,
-.custom-navbar nav .links-list .list-item:hover .list-link:after,
+nav .links-list .list-item .list-link.active:after,
+nav .links-list .list-item:hover .list-link:after,
 #dropdown:hover a:after{
     width: 80%;
 }
 
 #dropdown{
     position: relative;
-    
 }
 
 #dropdown a{
@@ -231,7 +276,8 @@ header{
 
 #dropdown .dropdown-list{
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
     visibility: hidden;
     padding: 10px 0;
     background-color: #fff;
@@ -239,6 +285,7 @@ header{
     left: 0;
     opacity: 0;
     transition: 0.3s;
+    min-width: 160px;
 }
 
 #dropdown .dropdown-list li{
@@ -988,9 +1035,357 @@ footer .copyright p:last-of-type a{
 /* Footer Section */
 
 
+/* Media Screen at 1200 px */
+@media (max-width: 1200px){
+    .about-section .container .about-me p{
+        font-size: 18px;
+    }
+
+    .portfolio-modal .modal-img{
+        width: 50%;
+    }
+}
+
 /* Media Screen at 1024 px */
-@media (max-width: 1024px){
-    .container {
-        max-width: 95%;
+@media(max-width: 1024px){
+    .about-section .container .main-skills .main-info .image{
+        flex: 0 0 40%;
+    }
+    .about-section .container .main-skills .main-info .person-info{
+        flex: 0 0 55%;
+    }
+
+    .services .services-card{
+        padding: 40px 10px;
+    }
+
+    .blog .blog-card .card-info h4 a{
+        font-size: 19.8px;
+    }
+
+    .blog .blog-card .card-info p{
+        font-size: 15px;
+    }
+
+    
+    .blog .blog-card .footer .footer-author{
+        flex: 0 0 70%;
+    }
+
+    .contact .contact-item p{
+        font-size: 18px;
+    }
+}
+
+/* Media Screen at 768 px */
+@media(max-width: 768px){
+    nav{
+        z-index: 999999999;
+       
+    }
+    nav .custom-navbar .links-list{
+        display: none;
+    }
+
+    nav .mobile-navbar{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(78, 78, 78, 0.9);
+    }
+
+
+    nav .mobile-navbar .links-list {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: #fff;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 70px;
+        height: 80vh;
+        padding: 10px 10px;
+    }
+
+    nav .mobile-navbar .links-list li{
+        width: 100%;
+    }
+    
+
+    #dropdown a{
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #dropdown .dropdown-list{
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        top: 100%;
+        padding: 0;
+        background-color: transparent;
+        transition: all 0.25s ease-in-out;
+    }
+
+
+    #dropdown .dropdown-list li a{
+        padding: 5px 10px;
+    }
+
+    
+
+    nav .links-list .list-item .list-link,
+    #dropdown a{
+        color: #1e1e1e;
+        margin-bottom: 15px;
+        transition: all 0.25s ease-in-out;
+    }
+
+    nav .links-list .list-item .list-link:after,
+    #dropdown a::after{
+        content: none;
+    }
+
+    nav .links-list .list-item .list-link.active,
+    nav .links-list .list-item:hover .list-link,
+    #dropdown a:hover{
+        color: #0078ff;
+    }
+    
+
+    .icon-bars{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-close{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color: #fff;
+        right: 0;
+        z-index: 999999999999;
+    }
+
+    .about-section .container .main-skills .main-info{
+        flex-direction: column;
+    }
+
+    .about-section .container .main-skills .main-info .image{
+        margin-bottom: 20px;
+    }
+
+    .services .services-card .custom-icon{
+        padding: 20px;
+    }
+
+    .services .services-card .custom-icon::before{
+        font-size: 30px;
+    }
+
+    .services .services-card h4{
+        font-size: 17.4px;
+    }
+
+    .services .services-card p{
+        font-size: 14px;
+    }
+    .counter .counter-item .counter-desc{
+        font-size: 14px;
+    }
+
+    .portfolio .portfolio-card .card-desc .brief h3{
+        font-size: 14px;
+    }
+
+    .portfolio .portfolio-card .card-desc .brief p{
+        font-size: 10.8px;
+    }
+
+    .portfolio .portfolio-card .card-desc .icon .custom-icon::before{
+        font-size: 30px;
+    }
+
+    .blog .blog-card .card-info h4 a{
+        font-size: 16.8px;
+    }
+
+    .blog .blog-card .card-info p{
+        font-size: 14px;
+    }
+
+    .blog .blog-card .footer .footer-author span a{
+        font-size: 12px;
+    }
+
+    .blog .blog-card .footer .footer-time{
+        flex: 0 0 35%;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .blog .blog-card .footer .footer-time .icon-time{
+        margin-right: 2px;
+    }
+
+    .contact .contact-item p{
+        font-size: 15px;
+    }
+
+    .contact .contact-item .contact-info .info-location, .contact .contact-item .contact-info .info-mobile, .contact .contact-item .contact-info .info-mail{
+        font-size: 13px;
+    }
+
+    .contact .contact-item .contact-info .info-location .icon-location{
+        font-size: 16.2px;
+        margin-right: 10px;
+    }
+
+    .contact .contact-item .contact-info .info-mobile .icon-smartphone{
+        font-size: 16.2px;
+        margin-right: 10px;
+    }
+
+    .contact .contact-item .contact-info .info-mail .icon-envelope{
+        font-size: 16.2px;
+        margin-right: 10px;
+    }
+
+    .contact .contact-item .social-icons .icon{
+        font-size: 21px;
+    }
+
+    .contact .contact-form form .form-button button{
+        font-size: 14.2px;
+    }
+}
+
+/* Media Screen at 480px */
+@media (max-width: 480px){
+    .home-caption h1{
+        font-size: 38px;
+    }
+    .home-caption h1::after{
+        font-size: 26px;
+    }
+    .about-section .container{
+        padding: 2rem!important;
+    }
+    .section-title::after{
+        width: 10%;
+    }
+    .services .services-card .custom-icon{
+        padding: 40px;
+    }
+    .services .services-card .custom-icon::before{
+        font-size: 40px;
+    }
+    .services .services-card h4{
+        font-size: 22.4px;
+    }
+    .services .services-card p{
+        font-size: 16px;
+    }
+    .counter .counter-item{
+        margin-bottom: 30px;
+    }
+    .counter .counter-item .counter-desc{
+        font-size: 16px;
+    }
+    .portfolio .portfolio-card .card-desc .brief h3{
+        font-size: 19.2px;
+    }
+    .portfolio .portfolio-card .card-desc .brief p{
+        font-size: 12.8px;
+    }
+    .portfolio .portfolio-card .card-desc .icon .custom-icon::before{
+        font-size: 40px;
+    }
+    .testimonial .testimonial-item .item-info .image img{
+        width: 30%;
+    }
+    .testimonial .testimonial-item .item-info .item-brief{
+        font-size: 16px;
+        width: 90%;
+    }
+    .blog .blog-card .card-info h4 a{
+        font-size: 20.8px;
+    }
+    .blog .blog-card .card-info p{
+        font-size: 16px;
+    }
+
+    .blog .blog-card{
+        margin-bottom: 30px;
+    }
+
+    .contact .container{
+        padding: 1.5rem!important;
+    }
+
+    .contact .contact-form{
+        margin-bottom: 30px;
+    }
+
+    footer p:last-of-type{
+        text-align: center!important;
+    }
+}
+
+@media (max-width: 325px){
+    .home-caption h1{
+        font-size: 28px;
+    }
+    .home-caption h1::after{
+        font-size: 20px;
+    }
+
+    .about-section .container{
+        padding: 0.5rem !important;
+    }
+
+    .about-section .container .about-me h2{
+        font-size: 27px;
+    }
+
+    .portfolio .portfolio-card .card-desc .icon .custom-icon::before{
+        font-size: 30px;
+    }
+
+    .testimonial .testimonial-item .item-info h4{
+        font-size: 20px;
+    }
+
+    .blog .blog-card .card-info h4 a{
+        font-size: 17.8px;
+    }
+    .testimonial .testimonial-item .item-info .item-brief{
+        width: 100%;
+    }
+
+    .blog .blog-card .card-info p{
+        font-size: 14px;
+    }
+
+    .contact .container{
+        padding: 0.5rem !important;
+    }
+    .contact .contact-form h2{
+        font-size: 27px;
+    }
+
+    .contact .contact-item h2{
+        font-size: 27px;
+    }
+
+    footer p{
+        font-size: 14px;
     }
 }

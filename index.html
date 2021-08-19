@@ -13,64 +13,71 @@
 
 <body>
   <div class="home-page">
+
     <div class="portfolio-modal">
       <span class="icon-chevron-thin-left" id="prev"></span>
       <span class="icon-chevron-thin-right" id="next"></span>
       <span class="icon-close" id="close"></span>
       <img class="modal-img">
     </div>
+
     <span class="icon-arrow-thin-up" id="goTop"></span>
+
     <!--============================Header Section======================================-->
     <header id="home" class="home-section">
       <!--============================Navbar Section======================================-->
-      <div class="custom-navbar">
-          <nav id="navbar">
-            <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-              <a href="#">DevFolio</a>
-            </div>
-
-            <div class="links-list">
-              <ul class="list-unstyled">
-                <li class="list-item">
-                  <a href="#home" class="list-link text-uppercase active">home</a>
-                </li>
-                <li class="list-item">
-                  <a href="#about" class="list-link text-uppercase">about</a>
-                </li>
-                <li class="list-item">
-                  <a href="#services" class="list-link text-uppercase">services</a>
-                </li>
-                <li class="list-item">
-                  <a href="#portfolio" class="list-link text-uppercase">work</a>
-                </li>
-                <li class="list-item">
-                  <a href="#blog" class="list-link text-uppercase">blog</a>
-                </li>
-                <li class="list-item" id="dropdown">
-
-                  <a class="text-uppercase">drop down <span class="icon-keyboard_arrow_down"></span></a>
-
-                  <ul class="dropdown-list list-unstyled">
-                    <li><a href="#" class="text-uppercase">drop down 1</a></li>
-                    <li><a href="#" class="text-uppercase">drop down 2</a></li>
-                    <li><a href="#" class="text-uppercase">drop down 3</a></li>
-                    <li><a href="#" class="text-uppercase">drop down 4</a></li>
-                  </ul>
-
-
-                </li>
-
-                <li class="list-item">
-                  <a href="#contact" class="list-link text-uppercase">contact</a>
-                </li>
-              </ul>
-
-            </div>
+      <nav id="navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo">
+            <a href="#">DevFolio</a>
           </div>
-          </nav>
-        
-      </div>
+
+
+          <div class="custom-navbar" id="custom-navbar">
+            <ul class="list-unstyled links-list ">
+              <li class="list-item">
+                <a href="#home" class="list-link text-uppercase active">home</a>
+              </li>
+              <li class="list-item">
+                <a href="#about" class="list-link text-uppercase">about</a>
+              </li>
+              <li class="list-item">
+                <a href="#services" class="list-link text-uppercase">services</a>
+              </li>
+              <li class="list-item">
+                <a href="#portfolio" class="list-link text-uppercase">work</a>
+              </li>
+              <li class="list-item">
+                <a href="#blog" class="list-link text-uppercase">blog</a>
+              </li>
+              <li class="list-item" id="dropdown">
+
+                <a class="text-uppercase">drop down <span class="icon-keyboard_arrow_down"></span></a>
+
+                <ul class="dropdown-list list-unstyled">
+                  <li><a href="#" class="text-uppercase">drop down 1</a></li>
+                  <li><a href="#" class="text-uppercase">drop down 2</a></li>
+                  <li><a href="#" class="text-uppercase">drop down 3</a></li>
+                  <li><a href="#" class="text-uppercase">drop down 4</a></li>
+                </ul>
+
+
+              </li>
+
+              <li class="list-item">
+                <a href="#contact" class="list-link text-uppercase">contact</a>
+              </li>
+
+            </ul>
+           
+            
+            
+            
+
+          </div>
+          <span id="menuicon" class="icon-bars"></span>
+        </div>
+      </nav>
       <!--============================Navbar Section======================================-->
 
       <!--============================Home Intro======================================-->
@@ -104,7 +111,7 @@
               <div class="skills">
                 <h5>Skill</h5>
                 <h6>HTML 85%</h6>
-                <div class="html"><span class="custom-progress" data-width= "85"></span></div>
+                <div class="html"><span class="custom-progress" data-width="85"></span></div>
                 <h6>CSS3 75%</h6>
                 <div class="css"><span class="custom-progress" data-width="75"></span></div>
                 <h6>PHP 50%</h6>
@@ -118,9 +125,14 @@
           <div class="col-md-6">
             <div class="about-me">
               <h2>About me</h2>
-              <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.</p>
-              <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.</p>
-              <p>Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+              <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
+                imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                Nulla porttitor accumsan tincidunt.</p>
+              <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
+                porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at
+                sem.</p>
+              <p>Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla
+                porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
             </div>
           </div>
         </div>
@@ -137,13 +149,15 @@
         </div>
 
         <div class="row">
+
           <div class="col-md-4">
             <div class="services-card text-center">
               <div class="icon">
                 <span class="icon-briefcase custom-icon"></span>
               </div>
               <h4 class="text-uppercase">WEB DESIGN</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni tempora perferendis eum non provident.</p>
             </div>
           </div>
 
@@ -153,7 +167,8 @@
                 <span class="icon-clipboard-checked custom-icon"></span>
               </div>
               <h4 class="text-uppercase">web development</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni tempora perferendis eum non provident.</p>
             </div>
           </div>
 
@@ -163,7 +178,8 @@
                 <span class="icon-bar-graph custom-icon"></span>
               </div>
               <h4 class="text-uppercase">photography</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni tempora perferendis eum non provident.</p>
             </div>
           </div>
 
@@ -173,7 +189,8 @@
                 <span class="icon-binoculars custom-icon"></span>
               </div>
               <h4 class="text-uppercase">RESPONSIVE DESIGN</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni tempora perferendis eum non provident.</p>
             </div>
           </div>
 
@@ -183,7 +200,8 @@
                 <span class="icon-sun custom-icon"></span>
               </div>
               <h4 class="text-uppercase">GRAPHIC DESIGN</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni tempora perferendis eum non provident.</p>
             </div>
           </div>
 
@@ -193,9 +211,11 @@
                 <span class="icon-calendar custom-icon"></span>
               </div>
               <h4 class="text-uppercase">MARKETING SERVICES</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni tempora perferendis eum non provident.</p>
             </div>
           </div>
+
         </div>
 
       </div>
@@ -265,7 +285,6 @@
               <div class="card-image">
                 <img src="images/work-1.jpg" class="img-fluid port-img">
               </div>
-
               <div class="card-desc">
                 <div class="brief">
                   <h3>Lorem impsum dolor</h3>
@@ -375,7 +394,7 @@
           </div>
         </div>
       </div>
-    
+
     </section>
     <!--============================Portfolio Section======================================-->
 
@@ -394,7 +413,7 @@
                 consectetur adipiscing elit.</p>
             </div>
           </div>
-          
+
           <div class="item-info mx-auto text-center">
             <div class="image">
               <img src="images/testimonial-4.jpg" class="img-fluid">
@@ -405,7 +424,7 @@
                 consectetur adipiscing elit.</p>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </section>
     <!--============================Testimonials Section======================================-->
@@ -427,7 +446,8 @@
               </div>
               <div class="card-info">
                 <h4><a href="#">See more ideas about Travel</a></h4>
-                <p>Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+                <p>Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa,
+                  convallis a pellentesque nec, egestas non nisi.</p>
               </div>
 
               <div class="footer">
@@ -452,7 +472,8 @@
               </div>
               <div class="card-info">
                 <h4><a href="#">See more ideas about Travel</a></h4>
-                <p>Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+                <p>Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa,
+                  convallis a pellentesque nec, egestas non nisi.</p>
               </div>
 
               <div class="footer">
@@ -477,7 +498,8 @@
               </div>
               <div class="card-info">
                 <h4><a href="#">See more ideas about Travel</a></h4>
-                <p>Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+                <p>Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa,
+                  convallis a pellentesque nec, egestas non nisi.</p>
               </div>
 
               <div class="footer">
@@ -521,7 +543,9 @@
           <div class="col-md-6">
             <div class="contact-item">
               <h2>Get in Touch</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia inventore?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita
+                aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia
+                inventore?</p>
               <div class="contact-info">
                 <div class="info-location">
                   <span class="icon-location"></span>
