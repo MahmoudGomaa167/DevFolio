@@ -1309,6 +1309,26 @@ footer .copyright p:last-of-type a{
     .portfolio .portfolio-card .card-desc .icon .custom-icon::before{
         font-size: 40px;
     }
+
+    .portfolio-modal .modal-img{
+        width: 80%;
+    }
+
+    .portfolio-modal .icon-chevron-thin-right{
+        font-size: 15px;
+        right: 5px;
+    }
+
+    .portfolio-modal .icon-chevron-thin-left{
+        font-size: 15px;
+        left: 5px;
+    }
+
+    .portfolio-modal .icon-close{
+        font-size: 15px;
+        padding: 10px;
+    }
+
     .testimonial .testimonial-item .item-info .image img{
         width: 30%;
     }
