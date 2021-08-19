@@ -142,6 +142,7 @@ $(document).ready(function () {
                 $('.portfolio-modal').css({
                     display: 'flex',
                 });
+                $(goTopBtn).css('opacity', '0');
                 $(modalImage).attr('src', imageSrc);
                 $('body').css('overflow', 'hidden');
             })
@@ -200,6 +201,9 @@ $(document).ready(function () {
             $('#custom-navbar').toggleClass('mobile-navbar');
             $('#custom-navbar').toggleClass('custom-navbar');
             $('.dropdown-list').toggleClass('mobile');
+            $('#dropdown').click(function(){
+                $('.dropdown-list').slideToggle(1000);
+            })
         });
 
 
